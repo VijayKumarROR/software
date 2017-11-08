@@ -1,0 +1,39 @@
+<div class="jumbotron text-center">
+<h1>New Categories</h1>
+</div>
+
+<div class="container">
+ <%= form_for @category do |c| %>
+	
+	<div class="col-sm-4">
+  	<%= c.label :name %>
+  </div>
+  <div class="col-sm-8">
+  	<%= c.text_field :name, :required => true %> </br>
+	</div>
+
+	<div class="col-sm-4">
+		<%= c.label :about %>
+	</div>
+  <div class="col-sm-8">
+		<%= c.text_field :about, :required => true %>
+	</div>
+
+  <div class="action">
+  	<%= c.submit "Save Category"%>
+  </div>
+  
+  <%end%>
+</div>
+
+<style type="text/css">
+  body
+  {
+    background-color: green;
+  }
+  .col-sm-8
+  {
+    margin-bottom: 85px;
+  }
+
+</style>
