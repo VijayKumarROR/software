@@ -1,0 +1,39 @@
+
+<!-- <script src="//code.jquery.com/jquery.min.js"></script>
+<script src="paginate.js"></script> -->
+<div id="pager">
+<table id="table" class="table table-bordered table-stripped">
+	<thead>
+		<tr>
+		   <th>SI No</th>
+			<th>Projects</th>
+			<th>Username</th>
+			<th>Category Name</th>
+		</tr>
+	</thead>
+	<%count = 0%>
+	<tbody>
+	<% @products.each do |p|%>
+		<tr>
+		    <td><%= count = count + 1%></td>
+			<td><%= p.name%></td>
+			<td><%= p.user.email%></td>
+			<td><%= p.category.name%></td>
+		</tr>
+	</tbody>
+	<%end%>
+</table>
+</div>
+<!-- <div class="pagination"></div> -->
+<!-- 
+<script type="text/javascript">
+$.noConflict();
+jQuery(function ($) { 
+    $("table") 
+    .tablesorter({widthFixed: true, widgets: ['zebra'] }) 
+    .tablesorterPager({
+        container: $("#pager"),
+        size:5
+    }); 
+});
+ </script> -->
