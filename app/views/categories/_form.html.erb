@@ -1,21 +1,21 @@
 <div class="jumbotron text-center">
-<h1>New Categories</h1>
+<h1 align="center">New Categories</h1>
 </div>
 
 <div class="container">
  <%= form_for @category do |c| %>
 	
-	<div class="col-sm-4">
+	<div class="form-group">
   	<%= c.label :name %>
   </div>
-  <div class="col-sm-8">
+  <div class="form-group">
   	<%= c.text_field :name, :required => true %> </br>
 	</div>
 
-	<div class="col-sm-4">
+	<div class="form-group">
 		<%= c.label :about %>
 	</div>
-  <div class="col-sm-8">
+  <div class="form-group">
 		<%= c.text_field :about, :required => true %>
 	</div>
 
@@ -31,9 +31,15 @@
   {
     background-color: green;
   }
-  .col-sm-8
+  .form-group
   {
-    margin-bottom: 85px;
+    margin-left: 650px;
+    padding: -10px;
+    margin-top: 60px;
   }
-
+  .action
+  {
+    margin-left: 680px;
+    margin-top: 20px;
+  }
 </style>

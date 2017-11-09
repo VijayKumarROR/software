@@ -1,6 +1,15 @@
-<div class="container">
-	<div class="row">
-		<b>Projects :</b> <%= select_tag "product", options_from_collection_for_select(Product.all, "id", "name") %>
-	</div>
-</div>
-
+<table id="table" class="table table-bordered table-stripped">
+	<thead>
+		<tr>
+			<th>Projects</th>
+			<th>Username</th>
+			<th>Category Name</th>
+		</tr>
+	</thead>
+	<%= @products.each do |p|%>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,4 +1,8 @@
-
+<% if user_signed_in? %>
+	<b> User:</b><%= current_user.email %>
+	<li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+<%end%>
+<br>
 <!-- <script src="//code.jquery.com/jquery.min.js"></script>
 <script src="paginate.js"></script> -->
 <div id="pager">
@@ -37,3 +41,14 @@ jQuery(function ($) {
     }); 
 });
  </script> -->
+ <style type="text/css">
+ 	body
+ 	{
+ 		background-color: green;
+ 	}
+ 	#pager
+ 	{
+ 		margin-left: 500px;
+ 		margin-top: 200px;
+ 	}
+ </style>

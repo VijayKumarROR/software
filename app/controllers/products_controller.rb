@@ -28,13 +28,13 @@ def new
 	end
 
 	def show
-		
 	end
 
 	def product_list
 		#@product = Product.find(params[:id])
-		@product = Product.where(params[:id]).all
-        render :partial => "product", :object => @product
+		@products = Product.all
+		#@product = Product.where(params[:id]).all
+        #render :partial => "product", :object => @product
 	end
 
 	def update_users
@@ -60,6 +60,6 @@ def new
 	
 	private
 	def product_params
-		params.require(:product).permit(:user_id,:cat_id,:name,:cost)
+		params.require(:product).permit(:user_id,:category_id,:name,:cost)
 	end
 end
